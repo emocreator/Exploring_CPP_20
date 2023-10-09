@@ -9,10 +9,8 @@ int main()
 {
     int min{std::numeric_limits<int>::max()};
     int max{std::numeric_limits<int>::min()};
-
     std::cout << "min =" << min << "\n";
     std::cout << "max =" << max << "\n";
-
     bool any{false};
     int x;
     

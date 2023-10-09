@@ -37,7 +37,6 @@ auto read(std::basic_istream<Ch>& in) -> std::vector<text<Ch>>
     text<Ch> line;
     while (std::getline(in, line))
         result.emplace_back(std::move(line));
-
     return result;
 }
 
@@ -48,7 +47,6 @@ try
     // Throw an exception if an unrecoverable input error occurs, e.g.,
     // disk failure.
     std::cin.exceptions(std::ios_base::badbit);
-
     // Part 1. Read the entire input into text. If the command line names a file,
     // read that file. Otherwise, read the standard input.
     std::vector<text<char>> text; ///< Store the lines of text here
@@ -64,7 +62,6 @@ try
         }
         text = read(in);
     }
-
     // Part 2. Sort the text. The second command line argument, if present,
     // names a locale, to control the sort order. Without a command line
     // argument, use the default locale (which is obtained from the OS).
